@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="styles.css">
 <?php
  require_once "../../db_connection.php";
@@ -28,8 +29,14 @@ $tab=[Gold,Tesla,Etherum,Silver,Bitcoin,Apple];
  {
      print "<tr>";
      $max=$row[1]+$row[2];
+     $fill=ceil($row[1]/$max*100);
+     $fill2=ceil($row[2]/$max*100);
      //print("<td>$row[0]<td><input type='range' min='0' max=$max value=$row[1] class='slider'>");
-     print("<td>$row[0]<td><progress value=$row[1] max=$max> xd </progress>");
+     print "<td>$row[0]<td>";
+     print "<div class='progress'>";
+     print "<div class='progress-bar bg-success' role='progressbar' style='width: $fill%;'>$fill%</div>";
+     print "<div class='progress-bar' role='progressbar' style='width: $fill2%;'>$fill2%</div>";
+     print "</div>";
  }
 ?>
 </table>
