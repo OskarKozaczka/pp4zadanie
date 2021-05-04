@@ -31,7 +31,6 @@ $tab=[Gold,Tesla,Etherum,Silver,Bitcoin,Apple];
      $max=$row[1]+$row[2];
      $fill=ceil($row[1]/$max*100);
      $fill2=ceil($row[2]/$max*100);
-     //print("<td>$row[0]<td><input type='range' min='0' max=$max value=$row[1] class='slider'>");
      print "<td>$row[0]<td>";
      print "<div class='progress'>";
      print "<div class='progress-bar bg-success' role='progressbar' style='width: $fill%;'>$fill%</div>";
