@@ -13,6 +13,13 @@ for ($i=0; $i<$rn; $i++)
     print "<option value=$x>";
     print "<h>$x</h><br><c>UP:</c><input type=radio value=up name=$x><c>DOWN:</c><input type=radio value=down name=$x><br>";
 }
+
+if(!isset($_COOKIE['x']))
+{
+    print "<input type=submit value='Show Results'>";
+    setcookie('x','y');
+}else{
+    print "<h>Already voted!</h>";
+}
 ?>
-<input type=submit value='Show Results'>
 </form>
