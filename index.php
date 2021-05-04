@@ -2,8 +2,6 @@
 <link rel="stylesheet" href="styles.css">
 <h>Market Sentiment Survey</h><br><br>
 <?php
-
-
 require_once "../../db_connection.php";
 $c=pg_connect("host=sbazy user=s214508 dbname=s214508 password=$password");
 $s="select * from futures order by id";

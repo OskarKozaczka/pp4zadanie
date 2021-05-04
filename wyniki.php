@@ -1,6 +1,4 @@
 <link rel="stylesheet" href="styles.css">
-
-
 <?php
  require_once "../../db_connection.php";
 
@@ -22,17 +20,16 @@ $tab=[Gold,Tesla,Etherum,Silver,Bitcoin,Apple];
  $s="select name,upvotes,downvotes from futures order by id";
  $r=$c->prepare("$s");
  $r->execute();
-
  $cn=$r->columnCount();
 
  print "<table border=1>";
-
 
  foreach($r as $row)
  {
      print "<tr>";
      $max=$row[1]+$row[2];
-     print("<td>$row[0]<td><input type='range' min='0' max=$max value=$row[1] class='slider'>");
+     //print("<td>$row[0]<td><input type='range' min='0' max=$max value=$row[1] class='slider'>");
+     print("<td>$row[0]<td><progress value=$row[1] max=$max> xd </progress>");
  }
 ?>
 </table>
