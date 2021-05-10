@@ -25,6 +25,7 @@ table {
 td {
   height: 20px;
   width: auto;
+  padding-right: 100px;
 }
 
 .radio {
