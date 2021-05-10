@@ -3,20 +3,17 @@ body {
   background-size: cover;
 }
 
-
-.progress-bar{
-background-color: red;
+.progress-bar {
+  background-color: red;
 }
 
-
-
-table{
+table {
   text-align: center;
-  position:relative;
-  width:40%;
-  height:50%;
+  position: relative;
+  width: 40%;
+  height: 50%;
   left: 31%;
-  top:20%;
+  top: 20%;
 }
 
 td {
@@ -24,45 +21,43 @@ td {
   background-color: #ccc;
 }
 
-
-.radio{
+.radio {
   border: 0px;
   width: 100%;
   height: 6em;
-  }
-
-input[type=submit]{
-  width: 10%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
 }
 
-
+input[type="submit"] {
+  padding: 12px 20px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+}
 
 h {
-  color:white;
-  outline-width:20px;
+  color: white;
+  outline-width: 20px;
   outline-color: black;
   padding: 12px 20px;
   text-align: center;
-  font-size:x-large;
-  font-family: 'Times New Roman';
+  font-size: x-large;
+  font-family: "Times New Roman";
 }
 
 c {
-  color:white;
-  outline-width:20px;
+  color: white;
+  outline-width: 20px;
   outline-color: black;
   padding: 12px 20px;
   text-align: center;
-  font-size:large;
-  font-family: 'Times New Roman';
+  font-size: large;
+  font-family: "Times New Roman";
 }
 
 form {
+  padding-top: 1cm;
+  display: block;
   text-align: center;
+  align-items: center;
 }

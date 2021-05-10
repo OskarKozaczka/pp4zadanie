@@ -18,8 +18,6 @@
 </nav>
 <form  method="post" action='wyniki.php'>
 
-<div class="cover-container d-flex h-100 p-5 mx-auto flex-column">
-
 <?php
 require_once "../../db_connection.php";
 $c=pg_connect("host=sbazy user=s214508 dbname=s214508 password=$password");
@@ -27,7 +25,6 @@ $s="select * from futures order by id";
 $r=pg_exec($c,$s);
 $rn=pg_numrows($r);
 for ($i=0; $i<$rn; $i++)
-
 {
 {
     $x=pg_result($r,$i,1);
@@ -44,13 +41,10 @@ for ($i=0; $i<$rn; $i++)
 if(!isset($_COOKIE['x']))
 {
     print "<input type=submit value='Show Results'>";
-    setcookie('x','y');
+    //setcookie('x','y');
 }else{
     print "<h>Already voted!</h>";
 }
 
 ?>
-
-<input type=submit value='Show Results'>
-</div>
 </form>
