@@ -46,7 +46,7 @@ if(!isset($_COOKIE['x']))
     print "<input type=submit value='Vote'>";
     setcookie('x','y');
 }else{
-    print "<h>Already voted!</h>";
+    print "<h style='width:100%'>Already voted!</h>";
 }
 
 ?>
