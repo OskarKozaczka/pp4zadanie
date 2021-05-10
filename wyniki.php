@@ -1,5 +1,22 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 <link rel="stylesheet" href="styles.css">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Market Sentiment Survey</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
+        <a class="nav-link" href="./wyniki.php">Results</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
 <?php
  require_once "../../db_connection.php";
 
@@ -22,20 +39,20 @@ $tab=[Gold,Tesla,Etherum,Silver,Bitcoin,Apple];
  $r=$c->prepare("$s");
  $r->execute();
  $cn=$r->columnCount();
-
- print "<table border=1>";
-
+ print "<table>";
  foreach($r as $row)
  {
      print "<tr>";
      $max=$row[1]+$row[2];
      $fill=ceil($row[1]/$max*100);
      $fill2=ceil($row[2]/$max*100);
-     print "<td>$row[0]<td>";
+     print "<td><h>$row[0]</h><td>";
+     echo "<span>";
      print "<div class='progress'>";
-     print "<div class='progress-bar bg-success' role='progressbar' style='width: $fill%;'>$fill%</div>";
-     print "<div class='progress-bar' role='progressbar' style='width: $fill2%;'>$fill2%</div>";
+     print "<div class='progress-bar-green' role='progressbar' style='width: $fill%;'>$fill%</div>";
+     print "<div class='progress-bar-red' role='progressbar' style='width: $fill2%;'>$fill2%</div>";
      print "</div>";
+     echo "</span>";
  }
 ?>
 </table>

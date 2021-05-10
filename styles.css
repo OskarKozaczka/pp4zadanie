@@ -3,22 +3,28 @@ body {
   background-size: cover;
 }
 
-.progress-bar {
+.progress-bar-green {
+  background-color: #198754;
+}
+
+.progress-bar-red {
   background-color: red;
 }
 
 table {
+  padding-top: 1cm;
   text-align: center;
   position: relative;
   width: 40%;
   height: 50%;
-  left: 31%;
-  top: 20%;
+  margin: auto;
+  margin-top: 5%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 td {
   height: 20px;
-  background-color: #ccc;
+  width: auto;
 }
 
 .radio {
@@ -41,8 +47,10 @@ h {
   outline-color: black;
   padding: 12px 20px;
   text-align: center;
+  display: inline-block;
   font-size: x-large;
   font-family: "Times New Roman";
+  width: 10%;
 }
 
 c {
@@ -56,8 +64,17 @@ c {
 }
 
 form {
+  width: 50%;
+  height: auto;
   padding-top: 1cm;
   display: block;
   text-align: center;
-  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+span {
+  margin-left: 100px;
 }
