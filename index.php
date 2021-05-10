@@ -44,7 +44,7 @@ for ($i=0; $i<$rn; $i++)
 if(!isset($_COOKIE['x']))
 {
     print "<input type=submit value='Vote'>";
-    //setcookie('x','y');
+    setcookie('x','y');
 }else{
     print "<h>Already voted!</h>";
 }
