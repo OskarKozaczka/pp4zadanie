@@ -27,6 +27,7 @@ $s="select * from futures order by id";
 $r=pg_exec($c,$s);
 $rn=pg_numrows($r);
 for ($i=0; $i<$rn; $i++)
+
 {
 {
     $x=pg_result($r,$i,1);
